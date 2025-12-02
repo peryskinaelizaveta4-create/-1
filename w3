@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    int n;
+    int count = 0;
+    int sum = 0;
+
+    cout << "Введите число: ";
+    while (cin >> n && n != 0) {
+        count++;
+        sum += n;
+        cout << "Введите число: ";
+    }
+
+    cout << "Количество чисел: " << count << endl;
+    cout << "Сумма: " << sum << endl;
+    return 0;
+}
