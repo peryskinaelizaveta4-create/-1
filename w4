@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    long long n;
+    cout << "Введите число: ";
+    if (!(cin >> n))
+        return 0;
+    if (n < 0) n = -n;
+    int count = 0;
+    if (n == 0) count = 1;
+
+    while (n > 0) {
+        n /= 10;
+        ++count;
+    }
+
+    cout << "Количество цифр: " << count << endl;
+    return 0;
+}
